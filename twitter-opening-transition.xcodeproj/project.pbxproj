@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		237B221A22DE18D300D587E7 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B221922DE18D300D587E7 /* SplashController.swift */; };
 		23871CD022DE134600945959 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23871CCF22DE134600945959 /* AppDelegate.swift */; };
 		23871CD222DE134600945959 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23871CD122DE134600945959 /* FirstViewController.swift */; };
 		23871CD422DE134600945959 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23871CD322DE134600945959 /* SecondViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		237B221922DE18D300D587E7 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		23871CCC22DE134600945959 /* twitter-opening-transition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "twitter-opening-transition.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23871CCF22DE134600945959 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23871CD122DE134600945959 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				23871CCF22DE134600945959 /* AppDelegate.swift */,
 				23871CD122DE134600945959 /* FirstViewController.swift */,
 				23871CD322DE134600945959 /* SecondViewController.swift */,
+				237B221922DE18D300D587E7 /* SplashController.swift */,
 				23871CD522DE134600945959 /* Main.storyboard */,
 				23871CD822DE134700945959 /* Assets.xcassets */,
 				23871CDA22DE134700945959 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				237B221A22DE18D300D587E7 /* SplashController.swift in Sources */,
 				23871CD422DE134600945959 /* SecondViewController.swift in Sources */,
 				23871CD022DE134600945959 /* AppDelegate.swift in Sources */,
 				23871CD222DE134600945959 /* FirstViewController.swift in Sources */,
