@@ -10,8 +10,11 @@ import UIKit
 
 class SplashController: UIViewController {
 
+    fileprivate var transition: SplashTransition?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.transition = SplashTransition()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -19,6 +22,7 @@ class SplashController: UIViewController {
 
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "mainApplication")
+        controller.transitioningDelegate = self.transition
         self.present(controller, animated: true, completion: nil)
     }
 
