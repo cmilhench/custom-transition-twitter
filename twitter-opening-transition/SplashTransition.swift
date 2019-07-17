@@ -39,16 +39,13 @@ extension SplashTransition : UIViewControllerAnimatedTransitioning {
         container.addSubview(toView)
 
         // Calculate the start point
-        let frame = CGRect(x: container.bounds.size.width/2-25, y: container.bounds.size.height/2-25, width: 50, height: 50)
-        let start = UIBezierPath(ovalIn: frame).cgPath
+        let start = CGRect(x: 0, y: 0, width: 100, height: 100)
 
         // Calculate the end point
-        let point = CGPoint(x: frame.midX, y: frame.midY - toView.bounds.height)
-        let radius = sqrt((point.x*point.x) + (point.y*point.y));
-        let finish = UIBezierPath.init(ovalIn: frame.insetBy(dx: -radius, dy: -radius)).cgPath
+        let finish = CGRect(x: 0, y: 0, width: 1000, height: 1000)
 
         // Create the animation
-        let animation = CAKeyframeAnimation.init(keyPath: "path")
+        let animation = CAKeyframeAnimation.init(keyPath: "bounds")
         animation.beginTime = CACurrentMediaTime();
         animation.duration = self.transitionDuration(using:transitionContext)
         animation.delegate = self;
@@ -58,9 +55,12 @@ extension SplashTransition : UIViewControllerAnimatedTransitioning {
         animation.keyTimes = [0, self.transitionDuration(using:transitionContext)] as [NSNumber]
 
         // Create the layer
-        let layer = CAShapeLayer()
-        layer.path = start;
-        layer.add(animation, forKey: "path")
+        let layer = CALayer()
+        layer.contents = UIImage(named: "logo")?.cgImage
+        layer.bounds = start
+        layer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        layer.position = CGPoint(x: toView.frame.size.width/2, y: toView.frame.size.height/2)
+        layer.add(animation, forKey: "bounds")
         toView.layer.mask = layer
     }
 }
